@@ -1,4 +1,4 @@
-# Hello world
+# 哦耶我练多线程
 
-如果这个模板有用，请点一个🌟吧！
+模板来源
 [Github Repo](https://github.com/Codesire-Deng/TemplateRepoCxx)

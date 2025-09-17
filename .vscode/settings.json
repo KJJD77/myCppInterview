@@ -93,7 +93,16 @@
         "forward_list": "cpp",
         "executor": "cpp",
         "io_context": "cpp",
-        "netfwd": "cpp"
+        "netfwd": "cpp",
+        "regex": "cpp",
+        "valarray": "cpp",
+        "csetjmp": "cpp",
+        "barrier": "cpp",
+        "charconv": "cpp",
+        "cuchar": "cpp",
+        "latch": "cpp",
+        "scoped_allocator": "cpp",
+        "shared_mutex": "cpp"
     },
     "cmake.buildTask": true
 }
