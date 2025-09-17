@@ -9,7 +9,7 @@ void producer(int id, int count) {
         while (buffer.size() >= MAX_BUFFER) cv.wait(lock);
         buffer.push(i);
         std::cout << "producer id : " << id << "  produced " << i << std::endl;
-        cv.notify_all();
+        cv.notify_one();
     }
 }
 
@@ -20,7 +20,7 @@ void consumer(int id, int count) {
         auto now = buffer.front();
         buffer.pop();
         std::cout << "consumer id : " << id << "  consume " << now << std::endl;
-        cv.notify_all();
+        cv.notify_one();
     }
 }
 
