@@ -2,7 +2,7 @@
 std::queue<int> buffer;
 std::mutex mutex;
 std::condition_variable cv;
-const size_t MAX_BUFFER = 10;
+const size_t MAX_BUFFER = 1;
 void producer(int id, int count) {
     for (int i = 0; i < count; i++) {
         std::unique_lock lock(mutex);
@@ -25,8 +25,8 @@ void consumer(int id, int count) {
 }
 
 int main() {
-    std::thread t1(producer, 1, 10);
-    std::thread t2(consumer, 1, 10);
+    std::thread t1(producer, 1, 1000);
+    std::thread t2(consumer, 1, 1000);
     t1.join();
     t2.join();
 }
