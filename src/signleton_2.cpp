@@ -10,7 +10,9 @@ class signleton {
     signleton &operator=(const signleton &) = delete;
     static signleton signle;
 };
+
 signleton signleton::signle;
+
 int main() {
     signleton &signle = signleton::get();
 }
